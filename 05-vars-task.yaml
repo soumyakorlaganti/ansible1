@@ -12,7 +12,5 @@
       msg: "Hi, we are learning {{Course}} from Trainer {{Trainer}}, Duration is {{Duration}}."
 
   - name: print information
-    vars: # Task level variables
-      Course: "DevOps"
     ansible.builtin.debug:
       msg: "Hi, we are learning {{Course}} from Trainer {{Trainer}}, Duration is {{Duration}}."
