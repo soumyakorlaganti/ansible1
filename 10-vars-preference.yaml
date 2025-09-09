@@ -15,9 +15,10 @@
     ansible.builtin.debug:
       msg: "Hello, Good {{WISHES}}"
 
-# 1. arguments
+# 1. arguments (must know)
 # 2. Task level
 # 3. variable files
 # 4. prompt
 # 5. play level
 # 6. inventory
+# 7. role level
