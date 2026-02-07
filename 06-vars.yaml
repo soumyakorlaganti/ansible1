@@ -1,0 +1,13 @@
+- name: play level variables
+  hosts: local
+  connection: local #if we give connection as local then no need to give username & password
+  vars_files:  # calling variables from other location
+  - course.yaml
+  tasks:
+  - name: print variables
+    vars:
+      COURSE:Ansible
+    ansible.builtin.debug:
+      msg: "Course is: {{ COURSE }}, Trainer is: {{ TRAINER }}" #reffering variables 
+
+#In ansible by seeing {{}} consider as variables.
