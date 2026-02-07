@@ -10,4 +10,4 @@
     ansible.builtin.debug:
       msg: "Course is: {{ COURSE }}, Trainer is: {{ TRAINER }}" #reffering variables 
 
-#In ansible by seeing {{}} consider as variable.
+#In ansible by seeing {{}} consider as variables.
