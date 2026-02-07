@@ -1,11 +1,13 @@
 - name: play level variables
   hosts: local
   connection: local #if we give connection as local then no need to give username & password
-  vars:
-    COURSE: "Devsecops with AWS"
+  vars:  
+    COURSE: "Devsecops with AWS"  # Declaring variables
     DURATION: "140HRS"
     TRAINER: "Sivakumar"
   tasks:
   - name: print variables
     ansible.builtin.debug:
-      msg: "Course is: {{ COURSE }}, Trainer is: {{ TRAINER }}"
+      msg: "Course is: {{ COURSE }}, Trainer is: {{ TRAINER }}" #reffering variables 
+
+#In ansible by seeing {{}} consider as variable.
