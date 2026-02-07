@@ -1,5 +1,7 @@
-- name: ping the server
+- name: ping the server 
   hosts: web
   tasks:
   - name: ping the web server
     ansible.builtin.ping:
+
+# ansible is trying to reach the server by using ping.
