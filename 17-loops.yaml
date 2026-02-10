@@ -1,0 +1,14 @@
+- name: install packages
+  hosts: local
+  connection: local
+  become: yes
+  tasks:
+  - name: install package
+    ansible.builtin.package:
+      name: "{{ item }}" # Ansible understands by seeing item keyword ,here writing loops with 3 entries so loop 3 items and install these packages.
+      state: present
+    loop: # list of string
+    - mysql
+    - nginx
+    - zip
+
