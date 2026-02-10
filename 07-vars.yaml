@@ -1,7 +1,7 @@
 - name: print username and password
   hosts: local
   connection: local
-  vars_prompt: # for confidential information use prompt
+  vars_prompt: # for confidential information use prompt taking inputs dynamically
   - name: username
     prompt: Please enter your username
     private: false

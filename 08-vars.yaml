@@ -1,7 +1,9 @@
-- name: play level variables
+- name: inventory variables
   hosts: local
-  connection: local
+  connection: local # if we give connection local it will not expect username and password
   tasks:
   - name: print variables
     ansible.builtin.debug:
       msg: "Course is: {{ COURSE }}"
+
+# variables from inventory

@@ -1,4 +1,4 @@
-- name: play level variables
+- name: task level variables
   hosts: local
   connection: local #if we give connection as local then no need to give username & password
   vars:  
@@ -8,8 +8,7 @@
   tasks:
   - name: print variables
     vars:
-      COURSE: Ansible     #task level variables
+      COURSE: Ansible     #task level variables will override play level variables, values may change or maynot change.
     ansible.builtin.debug:
       msg: "Course is: {{ COURSE }}, Trainer is: {{ TRAINER }}" #reffering variables 
 
-#task level variables will override play level variables

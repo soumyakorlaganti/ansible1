@@ -1,4 +1,4 @@
-- name: play level variables
+- name: file variables
   hosts: local
   connection: local #if we give connection as local then no need to give username & password
   vars_files:  # calling variables from other location
