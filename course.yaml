@@ -1,3 +1,4 @@
 COURSE: "Devsecops with AWS"  # Declaring variables
 DURATION: "140HRS"
 TRAINER: "Sivakumar"
+NAME: "Ansible from FILE"
