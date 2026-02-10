@@ -4,4 +4,4 @@
   tasks:
   - name: command module test
     ansible.builtin.command: cat /etc/passwd | grep root
-    register: users_output # taking the above command output into a variable.
+    register: users_output # take the above command output into a variable.
