@@ -13,7 +13,7 @@
 
   - name: shell module test
     # ansible.builtin.command: cat /etc/passwd | grep root
-    ansible.builtin.shell: ls -l > files.txt
+    ansible.builtin.shell: ls -ltr > files.txt
     register: files_output # take the above command output into a variable.
 
   - name: print output of files
