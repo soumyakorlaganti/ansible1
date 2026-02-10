@@ -9,3 +9,5 @@
     - Raju
     - Soumya
     - Tanshinisai
+
+# Ansible loop list of variables and take it into item in every iteration one by one.
