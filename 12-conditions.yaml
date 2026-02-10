@@ -2,7 +2,7 @@
   hosts: local
   connection: local
   vars: 
-    IS_LIVE: true  # If it is false it will not run output is skipping.
+    IS_LIVE: false  # If it is false it will not run output is skipping.
   tasks:
   - name: check live or not
     ansible.builtin.debug:
