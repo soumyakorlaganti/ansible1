@@ -5,3 +5,13 @@
   - name: print facts
     ansible.builtin.debug:
       msg: "{{ ansible_facts }}" # Gathering facts information stored here.
+
+  - name: check redhat or not
+    ansible.builtin.debug:
+      msg: "Yes, Package manager is RedHat"
+    when: ansible_facts.os_family == "RedHat" # Ansible keep this command ,If we run ansible.builtin.package then it will check os_family according to that it will install package.
+
+  - name: check Debian or not
+    ansible.builtin.debug:
+      msg: "Yes, Package manager is Debian"
+    when: ansible_facts.os_family == "Debian"   
