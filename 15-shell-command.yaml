@@ -10,3 +10,12 @@
   - name: print output
     ansible.builtin.debug:
       msg: "{{ users_output }}"
+
+  - name: shell module test
+    # ansible.builtin.command: cat /etc/passwd | grep root
+    ansible.builtin.shell: ls -l > files.txt
+    register: files_output # take the above command output into a variable.
+
+  - name: print output of files
+    ansible.builtin.debug:
+      msg: "{{ files.txt }}"
