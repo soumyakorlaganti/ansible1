@@ -1,0 +1,9 @@
+#!/bin/bash
+
+- name: variables from arguments
+  hosts: local
+  connection: local
+  tasks:
+  - name: print variables from arguments
+    ansible.builtin.debug:
+      msg: "Hi {{ NAME }}, Good Morning" # not mentioned variable from any where pass variables from commandline.
