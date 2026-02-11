@@ -3,6 +3,7 @@
   connection: local
   vars:
     topics: linux,shell,ansible,terraform  # string datatype
+    course: "Devops with Ansible"
     tagsList: # map/dictionary
       name: ansible
       project: roboshop
@@ -42,6 +43,14 @@
     ansible.builtin.set_fact: # setting the variable
       student_yaml: "{{ lookup('file', 'students.yaml' )}}"
 
-  - name: coonvert YAML to JSON
+  - name: convert YAML to JSON
     ansible.builtin.debug:
       msg: "{{ student_yaml | to_nice_json }}"
+
+  - name: convert to upper case
+    ansible.builtin.debug:
+      msg: "{{ COURSE | upper }}"
+
+  - name: convert to lower case
+    ansible.builtin.debug:
+      msg: "{{ COURSE | lower }}"
