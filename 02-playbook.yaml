@@ -2,7 +2,14 @@
   hosts: web
   tasks:
   - name: print hello world
-    ansible.builtin.debug:
+    ansible.builtin.debug:    # printing hello world by using debug.    
       msg: "Hello World!"
 
-# printing hello world by using debug.    
+- name: PLAY-2
+  hosts: local
+  connection: local
+  tasks: 
+  - name: play-2 and task-1
+    ansible.builtin.debug:
+      msg: "Hello from PLAY-2 and TASK-1"
+
