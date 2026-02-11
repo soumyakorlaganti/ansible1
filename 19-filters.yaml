@@ -4,7 +4,7 @@
   vars:
     topics: linux,shell,ansible,terraform  # string datatype
     course: "Devops with Ansible"
-    myIp: "246.567.890.287"
+    myIp: "192.23.89.123"
     tagsList: # map/dictionary
       name: ansible
       project: roboshop
