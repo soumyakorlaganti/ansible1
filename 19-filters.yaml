@@ -49,8 +49,8 @@
 
   - name: convert to upper case
     ansible.builtin.debug:
-      msg: "{{ COURSE | upper }}"
+      msg: "{{ course | upper }}"
 
   - name: convert to lower case
     ansible.builtin.debug:
-      msg: "{{ COURSE | lower }}"
+      msg: "{{ course | lower }}"
