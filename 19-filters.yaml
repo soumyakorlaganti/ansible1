@@ -10,4 +10,4 @@
 
   - name: convert string to list # by using split ','
     ansible.builtin.debug:
-      msg: "{{ topics | 'split',''}}" # if we don't mention ',' it will take it as space.
+      msg: "{{ topics | split',' }}" # if we don't mention ',' it will take it as space.
