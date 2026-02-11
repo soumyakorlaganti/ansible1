@@ -4,8 +4,8 @@
   become: yes
   tasks:
   - name: check user exist or not
-    ansible.builtin.command: id roboshop
-    register: user_ouput
+    ansible.builtin.command: id roboshop # Using command module here
+    register: user_ouput # Execute command and take output
     ignore_errors: true
 
   - name: print the output
