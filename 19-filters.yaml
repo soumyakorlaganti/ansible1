@@ -8,6 +8,6 @@
     ansible.builtin.debug:
       msg: "Hi Soumya, {{ GREETING | default ('Good Morning')}}" # if we forgot to define variable here ,it automatically print by the help of default value.
 
-  - name: convert string to list
+  - name: convert string to list # by using split ','
     ansible.builtin.debug:
-      msg: "{{ topics | split ',' }}"
+      msg: "{{ topics | split','}}" # if we don't mention ',' it will take it as space.
