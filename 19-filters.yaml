@@ -41,12 +41,14 @@
       msg: "{{ tagsMap | items2dict }}"    
 
   - name: read students yaml
-    ansible.builtin.set_fact: # setting the variable
+    ansible.builtin.set_fact: # setting the variable dynamically
       student_yaml: "{{ lookup('file', 'students.yaml' )}}"
+
+  # Ansible findout student.yaml from available list of playbooks, then that inside content will give it to from_yaml & store it in student_yaml.
 
   - name: convert YAML to JSON
     ansible.builtin.debug:
-      msg: "{{ student_yaml | to_nice_json }}"
+      msg: "{{ student_yaml | to_nice_json }}" # this is for human readable
 
   - name: convert to upper case
     ansible.builtin.debug:
@@ -58,4 +60,4 @@
 
   - name: check ipv4
     ansible.builtin.debug:
-      msg: "{{ myIp | ansible.utils.ipv4 }}"
+      msg: "{{ myIp | ansible.utils.ipv4 }}" # using this filter for finding mentioned ip address is proper ipv4 or not.
