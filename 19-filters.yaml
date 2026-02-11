@@ -1,7 +1,13 @@
 - name: demo on filters
   hosts: local
   connection: local
+  vars:
+    topics: linux,shell,ansible,terraform  # string datatype
   tasks:
   - name: greeting
     ansible.builtin.debug:
-      msg: "Hi Soumya, {{ GREETING | default ('Good Morning')}}"
+      msg: "Hi Soumya, {{ GREETING | default ('Good Morning')}}" # if we forgot to define variable here ,it automatically print by the help of default value.
+
+  - name: convert string to list
+    ansible.builtin.debug:
+      msg: "{{ topics | split ',' }}"
